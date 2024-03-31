@@ -1332,45 +1332,71 @@ section,
 # Features Section
 --------------------------------------------------------------*/
 .features {
-  padding: 10px 0;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
+#features {
+  padding: 60px 0;
+  background-color: #f8f9fa; /* Set background color */
+}
+
+#features h2 {
+  font-size: 36px; /* Set font size */
+  color: black; /* Set text color */
+  margin-bottom: 30px; /* Add some space below */
+  text-align: center; /* Center align text */
+}
+
+#features p {
+  font-size: 18px; /* Set font size */
+  color: #666; /* Set text color */
+  margin-bottom: 40px; /* Add some space below */
+  text-align: center; /* Center align text */
+}
+
+
 .features .features-item {
-  background-color: var(--box-background-color);
+  background-color: #fff;
   display: flex;
   align-items: center;
-  padding: 20px;
-  transition: 0.3s;
-  border: 1px solid rgba(var(--default-color-rgb), 0.1);
+  padding: 30px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
   position: relative;
 }
 
 .features .features-item i {
-  font-size: 32px;
-  padding-right: 10px;
-  line-height: 0;
+  font-size: 24px;
+  padding-right: 20px;
 }
 
 .features .features-item h3 {
   font-weight: 700;
   margin: 0;
   padding: 0;
-  line-height: 1;
-  font-size: 16px;
+  line-height: 1.2;
+  font-size: 18px;
+  color: #333;
 }
 
 .features .features-item h3 a {
-  color: var(--heading-color);
-  transition: 0.3s;
+  color: #333;
+  transition: color 0.3s;
+  text-decoration: none;
 }
 
 .features .features-item:hover {
-  border-color: var(--accent-color);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-color: #1ae4c2;
 }
 
 .features .features-item:hover h3 a {
-  color: var(--accent-color);
+  color: #ff7b54;
 }
+
 
 /*--------------------------------------------------------------
 # Courses Section
@@ -1537,12 +1563,19 @@ section,
 --------------------------------------------------------------*/
 .stats-about {
   --background-color: #f6f7f6;
-  padding: 25px 0;
+  padding: 60px 0; /* Increased padding for better spacing */
+  background-color: var(--background-color); /* Use custom background color */
+  text-align: center; /* Center align content */
 }
 
 .stats-about .stats-item {
   padding: 30px;
   width: 100%;
+  background-color: #fff; /* Set background color for stats item */
+  border-radius: 10px; /* Add border radius for rounded corners */
+  box-shadow: 0 0 20px rgba(31, 7, 15, 0.637); /* Add box shadow for depth */
+  margin-bottom: 20px; /* Add some space between stats items */
+  
 }
 
 .stats-about .stats-item span {
@@ -1550,6 +1583,7 @@ section,
   display: block;
   color: var(--accent-color);
   font-weight: 700;
+  margin-bottom: 10px; /* Add space below the number */
 }
 
 .stats-about .stats-item p {
@@ -1557,9 +1591,24 @@ section,
   padding: 0;
   margin: 0;
   font-family: var(--heading-font);
-  font-size: 15px;
+  font-size: 18px; /* Increase font size for better readability */
   font-weight: 600;
 }
+
+@media (max-width: 768px) {
+  .stats-about .stats-item {
+    padding: 20px; /* Decrease padding for smaller screens */
+  }
+
+  .stats-about .stats-item span {
+    font-size: 36px; /* Decrease font size for smaller screens */
+  }
+
+  .stats-about .stats-item p {
+    font-size: 16px; /* Decrease font size for smaller screens */
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Testimonials Section
